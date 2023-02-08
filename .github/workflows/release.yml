@@ -1,0 +1,20 @@
+name: Release
+on:
+  push:
+    branches:
+      - main
+env:
+  GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+jobs:
+  release:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          cache: "npm"
+          node-version: "18"
+      - run: npm ci --include=dev
+      - run: npm run lint
+      - run: npm test
+      - run: npx semantic-release

@@ -1,0 +1,16 @@
+{
+  "dir": "ltr",
+  "email": "Email address",
+  "err_auth_login": "The e-mail address or password is invalid.",
+  "err_auth_rate": "Too many request have been made.",
+  "err_auth_role": "This page is not accessible.",
+  "err_auth_user": "This page is not accessible.",
+  "err_input": "Enter a valid value",
+  "err_not_found": "This page is not found.",
+  "err_server": "A server error occurred.",
+  "err_validation": "The input is invalid.",
+  "forgot": "Forgot password?",
+  "login": "Log in",
+  "password": "Password",
+  "remember": "Remain logged in for 30 days"
+}

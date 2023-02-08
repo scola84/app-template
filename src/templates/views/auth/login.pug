@@ -1,0 +1,53 @@
+extends /layout
+include /includes/output
+
+block body
+  .container.login
+    form.card(method="POST", novalidate)
+      .logo
+        img(
+          alt=`Logo of ${name}`,
+          height=128,
+          src=`/assets/images/icon-512.png?v=${version}`
+        )
+
+      fieldset.form-fieldset
+        .form-column
+          if errors && errors.email
+            span.form-error= s("err_input")
+          input.form-text(
+            name="email",
+            type="email",
+            placeholder=s("email"),
+            value=user.email
+          )
+
+        .form-column
+          if errors && errors.password
+            span.form-error= s("err_input")
+          input.form-text(
+            autocomplete="current-password",
+            name="password",
+            type="password",
+            placeholder=s("password")
+          )
+
+        .form-row
+          input#auth-login-remember.form-checkbox(
+            name="remember",
+            type="checkbox",
+            value="true"
+          )
+          label(for="auth-login-remember")= s("remember")
+
+        .form-buttons
+          input(name="_csrf", type="hidden", value=csrf)
+          input(name="redirectUrl", type="hidden", value=redirectUrl)
+          button.form-button(type="submit")
+            span= s("login")
+            i.bi.bi-arrow-right
+
+      .card-footer
+        a.link(href="/auth/reset")= s("forgot")
+
+  +output

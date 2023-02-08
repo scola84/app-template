@@ -1,0 +1,5 @@
+extends /layout
+
+block body
+  main.container.error
+    .card= (s && s(message, { default: "err_server" })) || "Internal Server Error"

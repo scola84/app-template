@@ -1,0 +1,10 @@
+mixin output
+  if error || ok
+    output.output(data-me-output)&attributes(attributes)
+      each message in error
+        span.message.error.transition(data-me-hide-after="5000")
+          span= s(message)
+
+      each message in ok
+        span.message.ok.transition(data-me-hide-after="5000")
+          span= s(message)

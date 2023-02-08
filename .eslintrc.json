@@ -1,0 +1,31 @@
+{
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "extends": ["standard-with-typescript"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "no-console": [
+      "error",
+      {
+        "allow": ["error"]
+      }
+    ],
+    "no-shadow": ["error"],
+    "no-unused-vars": [
+      "error",
+      {
+        "args": "after-used"
+      }
+    ],
+    "quote-props": ["error", "consistent"],
+    "sort-imports": ["error"],
+    "sort-keys": ["error"],
+    "sort-vars": ["error"]
+  }
+}

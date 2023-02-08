@@ -1,0 +1,19 @@
+doctype html
+html(dir=dir, lang=locale)
+  head
+    title= name
+    meta(charset="utf-8")
+    meta(name="apple-mobile-web-app-capable", content="yes")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(
+      rel="apple-touch-icon",
+      href=`/assets/images/icon-192.png?v=${version}`
+    )
+    link(rel="icon", href=`/assets/images/icon-192.png?v=${version}`)
+    link(rel="manifest", href=`/manifest.json?v=${version}`)
+    link(rel="stylesheet", href=`/assets/styles/app.css?v=${version}`)
+    script(src="https://cdn.jsdelivr.net/npm/d3@7")
+    script(src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6")
+    script(src=`/assets/scripts/app.js?v=${version}`)
+  body
+    block body

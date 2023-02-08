@@ -1,0 +1,16 @@
+{
+  "dir": "ltr",
+  "email": "E-mailadres",
+  "err_auth_login": "Het e-mailadres of wachtwoord is ongeldig.",
+  "err_auth_rate": "Er zijn teveel inlogpogingen gedaan.",
+  "err_auth_role": "Deze pagina is niet toegankelijk.",
+  "err_auth_user": "Deze pagina is niet toegankelijk.",
+  "err_input": "Voer een geldige waarde in",
+  "err_not_found": "Deze pagina is niet gevonden.",
+  "err_server": "Er is een serverfout opgetreden.",
+  "err_validation": "De invoer is ongeldig.",
+  "forgot": "Wachtwoord vergeten?",
+  "login": "Inloggen",
+  "password": "Wachtwoord",
+  "remember": "Blijf 30 dagen ingelogd"
+}
